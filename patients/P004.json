@@ -1,0 +1,12 @@
+{
+  "id": "P004",
+  "scenario": "Missing clinical data",
+  "age": 68,
+  "conditions": ["hypertension"],
+  "smoker": false,
+  "riskLevel": "medium",
+  "bloodPressure": {
+    "diastolic": 90
+  },
+  "completedTasks": []
+}

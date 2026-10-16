@@ -1,0 +1,15 @@
+
+{
+  "id": "P002",
+  "scenario": "No recommendations",
+  "age": 35,
+  "conditions": [],
+  "smoker": false,
+  "riskLevel": "low",
+  "lastVisitDaysAgo": 10,
+  "bloodPressure": {
+    "systolic": 118,
+    "diastolic": 76
+  },
+  "completedTasks": []
+}

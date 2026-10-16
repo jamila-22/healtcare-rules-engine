@@ -1,0 +1,15 @@
+{
+  "id": "P005",
+  "scenario": "Duplicate blood pressure review recommendations",
+  "age": 52,
+  "conditions": [
+    "hypertension"
+  ],
+  "bloodPressure": {
+    "systolic": 160,
+    "diastolic": 95
+  },
+  "smoker": false,
+  "lastVisitDaysAgo": 10,
+  "completedTasks": []
+}

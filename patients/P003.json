@@ -1,0 +1,18 @@
+{
+  "id": "P003",
+  "scenario": "Completed tasks and suppression",
+  "age": 70,
+  "conditions": ["diabetes"],
+  "smoker": false,
+  "riskLevel": "medium",
+  "lastVisitDaysAgo": 45,
+  "bloodPressure": {
+    "systolic": 125,
+    "diastolic": 80
+  },
+  "completedTasks": [
+    "geriatric_assessment",
+    "blood_test",
+    "follow_up_visit"
+  ]
+}

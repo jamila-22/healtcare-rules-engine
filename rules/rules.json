@@ -1,0 +1,126 @@
+[
+  {
+    "id": "R001",
+    "name": "Geriatric assessment",
+    "ruleType": "generation",
+    "condition": {
+      "field": "age",
+      "operator": ">=",
+      "value": 65
+    },
+    "action": {
+      "type": "geriatric_assessment",
+      "priority": "MEDIUM"
+    },
+    "reason": "Patient is 65 years old or older"
+  },
+  {
+    "id": "R002",
+    "name": "Blood pressure review",
+    "ruleType": "generation",
+    "condition": {
+      "operator": "and",
+      "conditions": [
+        {
+          "field": "conditions",
+          "operator": "contains",
+          "value": "hypertension"
+        },
+        {
+          "field": "bloodPressure.systolic",
+          "operator": ">",
+          "value": 140
+        }
+      ]
+    },
+    "action": {
+      "type": "blood_pressure_review",
+      "priority": "HIGH"
+    },
+    "reason": "Patient has hypertension and systolic blood pressure above 140"
+  },
+  {
+    "id": "R003",
+    "name": "Smoking cessation assessment",
+    "ruleType": "generation",
+    "condition": {
+      "field": "smoker",
+      "operator": "==",
+      "value": true
+    },
+    "action": {
+      "type": "smoking_cessation_assessment",
+      "priority": "LOW"
+    },
+    "reason": "Patient is a smoker"
+  },
+  {
+    "id": "R004",
+    "name": "Follow-up visit",
+    "ruleType": "generation",
+    "condition": {
+      "field": "lastVisitDaysAgo",
+      "operator": ">",
+      "value": 30
+    },
+    "action": {
+      "type": "follow_up_visit",
+      "priority": "MEDIUM"
+    },
+    "reason": "More than 30 days have passed since the last visit"
+  },
+  {
+    "id": "R005",
+    "name": "Suppress completed tasks",
+    "ruleType": "suppression",
+    "condition": {
+      "field": "completedTasks",
+      "operator": "contains",
+      "valueFrom": "action.type"
+    },
+    "reason": "This activity has already been completed"
+  },
+  {
+    "id": "R006",
+    "name": "Blood test recommendation",
+    "ruleType": "generation",
+    "condition": {
+      "operator": "or",
+      "conditions": [
+        {
+          "field": "age",
+          "operator": ">=",
+          "value": 50
+        },
+        {
+          "field": "conditions",
+          "operator": "contains",
+          "value": "diabetes"
+        }
+      ]
+    },
+    "action": {
+      "type": "blood_test",
+      "priority": "MEDIUM"
+    },
+    "reason": "Patient is 65 or older or has diabetes"
+  },
+  
+  {
+    "id": "R007",
+    "name": "Routine hypertension review",
+    "ruleType": "generation",
+    "condition": {
+      "field": "conditions",
+      "operator": "contains",
+      "value": "hypertension"
+    },
+    "action": {
+      "type": "blood_pressure_review",
+      "priority": "MEDIUM"
+    },
+    "reason": "Patient has hypertension"
+  }
+
+
+]

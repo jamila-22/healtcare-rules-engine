@@ -1,0 +1,20 @@
+{
+  "id": "P001",
+  "scenario": "Multiple recommendations",
+  "age": 72,
+  "conditions": [
+    "diabetes",
+    "hypertension"
+  ],
+  "smoker": true,
+  "riskLevel": "medium",
+  "lastVisitDaysAgo": 45,
+  "bloodPressure": {
+    "systolic": 155,
+    "diastolic": 92
+  },
+  "completedTasks": [
+    "initial_assessment",
+    "blood_test"
+  ]
+}
